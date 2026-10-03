@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ωmper – Escola Profissionalizante de Elétrica</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--blue:#0a3fb5;--navy:#06205e;--deep:#041848;--yellow:#ffc20e;--white:#fff;--card:#f4f7ff;--ink:#06205e;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;font-family:Poppins,system-ui,Arial,sans-serif;background:var(--navy);color:var(--white);line-height:1.5}
+a{color:inherit}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+section{padding:64px 0}
+h1,h2{line-height:1.1;margin:0 0 16px;font-weight:800}
+h1{font-size:clamp(2.2rem,7vw,4rem)}
+h2{font-size:clamp(1.7rem,5vw,2.6rem)}
+.y{color:var(--yellow)}
+.logo{font-weight:800;font-size:2rem;letter-spacing:.5px}
+.logo span{color:var(--yellow)}
+.btn{display:inline-block;background:var(--yellow);color:var(--navy);font-weight:800;font-size:1.1rem;padding:16px 32px;border-radius:999px;text-decoration:none;box-shadow:0 6px 0 #b88a00;transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translateY(2px);box-shadow:0 4px 0 #b88a00}
+.btn:focus-visible,a:focus-visible{outline:3px solid #fff;outline-offset:3px}
+.hero{background:radial-gradient(circle at 80% 10%,#1558e0 0,var(--blue) 45%,var(--navy) 100%);text-align:center;padding:40px 0 72px}
+.hero .logo{font-size:3rem;margin-bottom:8px}
+.hero .tag{display:inline-block;background:var(--yellow);color:var(--navy);font-weight:600;padding:4px 16px;border-radius:999px;margin-bottom:40px}
+.hero p{max-width:34em;margin:0 auto 32px;font-size:1.15rem}
+.bolt{font-size:3rem;filter:drop-shadow(0 0 12px var(--yellow))}
+.light{background:var(--deep)}
+.grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));margin-top:32px}
+.card{background:var(--card);color:var(--ink);border-radius:20px;padding:24px;font-weight:600;display:flex;gap:16px;align-items:center;border-left:8px solid var(--yellow)}
+.card i{font-style:normal;font-size:2rem}
+.checks{list-style:none;padding:0;margin:32px 0 0;display:grid;gap:16px}
+.checks li{display:flex;gap:16px;align-items:center;font-size:1.25rem;font-weight:600}
+.checks li::before{content:"✓";flex:none;width:44px;height:44px;border:3px solid var(--yellow);border-radius:12px;color:var(--yellow);display:grid;place-items:center;font-weight:800}
+.split{display:grid;gap:32px;align-items:center}
+@media(min-width:800px){.split{grid-template-columns:1fr 1fr}}
+.demand{background:var(--blue);border-radius:24px;padding:32px;border:3px solid var(--yellow)}
+.cta{background:linear-gradient(180deg,var(--blue),var(--navy));text-align:center}
+.cta p{max-width:30em;margin:0 auto 32px}
+.contact{display:flex;flex-wrap:wrap;gap:12px 32px;justify-content:center;margin-top:40px;font-weight:600}
+.contact a{text-decoration:none;color:var(--yellow)}
+footer{background:var(--deep);text-align:center;padding:24px 20px;font-size:.85rem;opacity:.9}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="logo"><span>Ω</span>MPER</div>
+    <div class="tag">Escola profissionalizante de elétrica</div>
+    <h1>Aprenda <span class="y">elétrica na prática</span> e torne-se um profissional qualificado</h1>
+    <p>Conheça a Ωmper, a escola que vai transformar o seu futuro.</p>
+    <a class="btn buy" href="#">Quero me matricular</a>
+  </div>
+</header>
+
+<section class="light" id="cursos">
+  <div class="wrap">
+    <h2>O que você vai aprender na <span class="y">Ωmper</span></h2>
+    <div class="grid">
+      <div class="card"><i>⚡</i>Elétrica Predial / Residencial</div>
+      <div class="card"><i>⚙️</i>Comandos Elétricos</div>
+      <div class="card"><i>☀️</i>Energia Fotovoltaica</div>
+      <div class="card"><i>❄️</i>Ar Condicionado</div>
+    </div>
+  </div>
+</section>
+
+<section id="diferenciais">
+  <div class="wrap split">
+    <div>
+      <h2>Por que escolher a <span class="y">Ωmper</span>?</h2>
+      <ul class="checks">
+        <li>Treinamento NR 10 incluso</li>
+        <li>Laboratório prático altamente moderno</li>
+        <li>Professores especialistas do mercado</li>
+      </ul>
+    </div>
+    <div class="demand">
+      <h2>Uma profissão com <span class="y">alta demanda!</span></h2>
+      <p>O setor elétrico é um dos que mais cresce. Torne-se um profissional qualificado e conquiste sua independência financeira de verdade.</p>
+    </div>
+  </div>
+</section>
+
+<section class="cta" id="matricula">
+  <div class="wrap">
+    <h2>Faça sua <span class="y">matrícula</span> hoje mesmo na Ωmper!</h2>
+    <p>Garanta sua vaga pelo link abaixo. Se preferir, fale com a nossa equipe e venha conhecer a escola.</p>
+    <a class="btn buy" href="#">Comprar o curso</a>
+    <div class="contact">
+      <a href="https://wa.me/5582993869774" target="_blank" rel="noopener">📞 (82) 99386-9774</a>
+      <a href="https://instagram.com/amperescolaeletrica" target="_blank" rel="noopener">📷 @amperescolaeletrica</a>
+    </div>
+  </div>
+</section>
+
+<footer>© Ωmper – Escola Profissionalizante de Elétrica</footer>
+
+<script>
+/* COLOQUE AQUI O LINK DE COMPRA DO CURSO (entre as aspas).
+   Enquanto estiver vazio, os botões levam ao WhatsApp da escola. */
+var LINK_COMPRA = "";
+var destino = LINK_COMPRA || "https://wa.me/5582993869774?text=" + encodeURIComponent("Olá! Quero me matricular na Ωmper.");
+document.querySelectorAll(".buy").forEach(function(a){a.href = destino; a.target = "_blank"; a.rel = "noopener";});
+</script>
+</body>
+</html>
