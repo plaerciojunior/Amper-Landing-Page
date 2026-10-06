@@ -14,52 +14,82 @@ body{margin:0;font-family:Poppins,system-ui,Arial,sans-serif;background:var(--na
 a{color:inherit}
 .wrap{max-width:1040px;margin:0 auto;padding:0 20px}
 section{padding:64px 0}
-h1,h2{line-height:1.1;margin:0 0 16px;font-weight:800}
+h1,h2,h3{line-height:1.15;margin:0 0 16px;font-weight:800}
 h1{font-size:clamp(2.2rem,7vw,4rem)}
 h2{font-size:clamp(1.7rem,5vw,2.6rem)}
+h3{font-size:1.3rem}
 .y{color:var(--yellow)}
-.logo{font-weight:800;font-size:2rem;letter-spacing:.5px}
+.logo{font-weight:800;font-size:2rem}
 .logo span{color:var(--yellow)}
-.btn{display:inline-block;background:var(--yellow);color:var(--navy);font-weight:800;font-size:1.1rem;padding:16px 32px;border-radius:999px;text-decoration:none;box-shadow:0 6px 0 #b88a00;transition:transform .15s,box-shadow .15s}
+.btn{display:inline-block;background:var(--yellow);color:var(--navy);font-weight:800;font-size:1.05rem;padding:14px 28px;border-radius:999px;text-decoration:none;text-align:center;box-shadow:0 6px 0 #b88a00;transition:transform .15s,box-shadow .15s}
 .btn:hover{transform:translateY(2px);box-shadow:0 4px 0 #b88a00}
-.btn:focus-visible,a:focus-visible{outline:3px solid #fff;outline-offset:3px}
+.btn:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid #fff;outline-offset:3px}
 .hero{background:radial-gradient(circle at 80% 10%,#1558e0 0,var(--blue) 45%,var(--navy) 100%);text-align:center;padding:40px 0 72px}
-.hero .logo{font-size:3rem;margin-bottom:8px}
-.hero .tag{display:inline-block;background:var(--yellow);color:var(--navy);font-weight:600;padding:4px 16px;border-radius:999px;margin-bottom:40px}
+.brand{display:inline-block;background:#fff;border-radius:24px;padding:12px 24px;margin-bottom:32px;box-shadow:0 8px 0 var(--deep)}
+.brand img{display:block;width:min(260px,62vw);height:auto}
+.hero .tag{display:inline-block;background:var(--yellow);color:var(--navy);font-weight:600;padding:4px 16px;border-radius:999px;margin-bottom:24px}
+.hero-grid{display:grid;gap:24px;align-items:center}
+.hero-mascots{display:block;width:100%;max-width:460px;height:auto;margin:0 auto;filter:drop-shadow(0 14px 24px rgba(0,0,0,.35))}
+@media(min-width:800px){.hero-grid{grid-template-columns:1.1fr .9fr;text-align:left}.hero-grid p{margin:0 0 32px}}
+.withm{display:grid;gap:24px;align-items:center}
+.mascot{display:block;width:auto;height:auto;max-width:100%;max-height:320px;margin:0 auto;filter:drop-shadow(0 10px 18px rgba(0,0,0,.3))}
+@media(min-width:800px){.withm{grid-template-columns:200px 1fr}.withm.r{grid-template-columns:1fr 200px}}
+.cta-m{display:block;width:min(300px,70%);height:auto;margin:0 auto 16px;filter:drop-shadow(0 12px 20px rgba(0,0,0,.3))}
 .hero p{max-width:34em;margin:0 auto 32px;font-size:1.15rem}
-.bolt{font-size:3rem;filter:drop-shadow(0 0 12px var(--yellow))}
 .light{background:var(--deep)}
+.lead{max-width:44em}
 .grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));margin-top:32px}
 .card{background:var(--card);color:var(--ink);border-radius:20px;padding:24px;font-weight:600;display:flex;gap:16px;align-items:center;border-left:8px solid var(--yellow)}
 .card i{font-style:normal;font-size:2rem}
 .checks{list-style:none;padding:0;margin:32px 0 0;display:grid;gap:16px}
-.checks li{display:flex;gap:16px;align-items:center;font-size:1.25rem;font-weight:600}
+.checks li{display:flex;gap:16px;align-items:center;font-size:1.2rem;font-weight:600}
 .checks li::before{content:"✓";flex:none;width:44px;height:44px;border:3px solid var(--yellow);border-radius:12px;color:var(--yellow);display:grid;place-items:center;font-weight:800}
 .split{display:grid;gap:32px;align-items:center}
 @media(min-width:800px){.split{grid-template-columns:1fr 1fr}}
 .demand{background:var(--blue);border-radius:24px;padding:32px;border:3px solid var(--yellow)}
+.plans{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));margin-top:32px}
+.plan{background:var(--card);color:var(--ink);border-radius:24px;padding:28px;display:flex;flex-direction:column;gap:12px;border-top:8px solid var(--yellow)}
+.plan p{margin:0}
+.plan .badge{align-self:flex-start;background:var(--navy);color:var(--yellow);font-size:.8rem;font-weight:600;padding:2px 12px;border-radius:999px}
+.price{font-size:2rem;font-weight:800;color:var(--blue);line-height:1}
+.price small{display:block;font-size:.85rem;font-weight:600;color:var(--ink);margin-top:6px}
+.plan ul{margin:0;padding-left:20px}
+.plan .btn{margin-top:auto;background:var(--blue);color:#fff;box-shadow:0 6px 0 var(--deep)}
+.plan .btn:hover{box-shadow:0 4px 0 var(--deep)}
+.pay{background:#fff;border-radius:16px;padding:14px 16px;font-weight:600;display:grid;gap:4px}
+.sub{margin:48px 0 0}
+.info{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));margin-top:32px}
+.box{background:var(--blue);border:3px solid var(--yellow);border-radius:24px;padding:28px}
+.box p{margin:0 0 8px}
+details{background:var(--card);color:var(--ink);border-radius:16px;margin-top:12px;padding:0 20px}
+summary{cursor:pointer;font-weight:800;padding:16px 0;list-style-position:outside}
+details p{margin:0 0 16px}
 .cta{background:linear-gradient(180deg,var(--blue),var(--navy));text-align:center}
 .cta p{max-width:30em;margin:0 auto 32px}
 .contact{display:flex;flex-wrap:wrap;gap:12px 32px;justify-content:center;margin-top:40px;font-weight:600}
 .contact a{text-decoration:none;color:var(--yellow)}
 footer{background:var(--deep);text-align:center;padding:24px 20px;font-size:.85rem;opacity:.9}
 @media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
-
 </style>
 </head>
 <body>
 
 <header class="hero">
   <div class="wrap">
-    <div class="logo"><span>Ω</span>MPER</div>
-    <div class="tag">Escola profissionalizante de elétrica</div>
-    <h1>Aprenda <span class="y">elétrica na prática</span> e torne-se um profissional qualificado</h1>
-    <p>Conheça a Ωmper, a escola que vai transformar o seu futuro.</p>
-    <a class="btn buy" href="#">Quero me matricular</a>
+    <div class="brand"><img src="imagens/logo.png" width="520" height="209" alt="Ωmper – Escola Profissionalizante de Elétrica"></div>
+    <div class="hero-grid">
+      <div>
+        <div class="tag">Escola profissionalizante de elétrica</div>
+        <h1>Aprenda <span class="y">elétrica na prática</span> e torne-se um profissional qualificado</h1>
+        <p>Conheça a Ωmper, a escola que vai transformar o seu futuro. Cursos presenciais e online.</p>
+        <a class="btn" href="#cursos">Ver cursos e valores</a>
+      </div>
+      <img class="hero-mascots" src="imagens/mascotes-juntos.png" width="733" height="577" alt="Mascotes da Ωmper: eletricista homem e eletricista mulher de capacete amarelo">
+    </div>
   </div>
 </header>
 
-<section class="light" id="cursos">
+<section class="light" id="aprender">
   <div class="wrap">
     <h2>O que você vai aprender na <span class="y">Ωmper</span></h2>
     <div class="grid">
@@ -79,6 +109,7 @@ footer{background:var(--deep);text-align:center;padding:24px 20px;font-size:.85r
         <li>Treinamento NR 10 incluso</li>
         <li>Laboratório prático altamente moderno</li>
         <li>Professores especialistas do mercado</li>
+        <li>Acesso vitalício ao app da escola</li>
       </ul>
     </div>
     <div class="demand">
@@ -88,11 +119,128 @@ footer{background:var(--deep);text-align:center;padding:24px 20px;font-size:.85r
   </div>
 </section>
 
+<section class="light" id="cursos">
+  <div class="wrap">
+    <div class="withm">
+      <img class="mascot" src="imagens/mascote-homem.png" width="283" height="520" alt="Mascote eletricista apontando para os cursos" loading="lazy">
+      <div>
+        <h2>Cursos <span class="y">presenciais</span></h2>
+        <p class="lead">Aulas na nossa escola, com laboratório prático. Escolha o curso e finalize a matrícula pelo botão.</p>
+      </div>
+    </div>
+    <div class="plans">
+      <article class="plan">
+        <span class="badge">Presencial</span>
+        <h3>Eletricista Instalador e de Manutenção Predial com Comandos Elétricos</h3>
+        <div class="price">R$ 1.470,00</div>
+        <div class="pay">
+          <span>💵 Pix à vista: 10% off → <b>R$ 1.323,00</b></span>
+          <span>💳 Cartão: até 18x</span>
+          <span>📒 Carnê: 4x de R$ 367,50</span>
+        </div>
+        <a class="btn buy" data-produto="Curso Presencial de Eletricista Instalador e de Manutenção Predial com Comandos Elétricos" data-link="presencial1" href="#">Comprar este curso</a>
+      </article>
+      <article class="plan">
+        <span class="badge">Presencial</span>
+        <h3>Especialização em Comandos Elétricos</h3>
+        <div class="price">R$ 1.470,00</div>
+        <div class="pay">
+          <span>💵 Pix à vista: 10% off → <b>R$ 1.323,00</b></span>
+          <span>💳 Cartão: até 18x</span>
+          <span>📒 Carnê: 4x de R$ 367,50</span>
+        </div>
+        <a class="btn buy" data-produto="Curso Presencial de Especialização em Comandos Elétricos" data-link="presencial2" href="#">Comprar este curso</a>
+      </article>
+    </div>
+
+    <h2 class="sub">Curso <span class="y">online</span></h2>
+    <p class="lead">Estude no seu ritmo, de onde estiver.</p>
+    <div class="plans">
+      <article class="plan">
+        <span class="badge">Online · 180 horas</span>
+        <h3>Eletricista Instalador e de Manutenção Residencial/Predial com Iniciação em Comandos Elétricos</h3>
+        <div class="price">R$ 441,00</div>
+        <p>📱 Inclui acesso ao aplicativo da Ωmper e seus conteúdos, conforme as condições da modalidade.</p>
+        <a class="btn buy" data-produto="Curso Online de Eletricista Instalador e de Manutenção Residencial/Predial (180h)" data-link="online" href="#">Comprar o curso online</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="app">
+  <div class="wrap">
+    <div class="withm r">
+      <div>
+        <h2>App <span class="y">Super Amper</span> – Simular e Calcular</h2>
+        <p class="lead">Um dos nossos diferenciais: o aluno tem <b>acesso vitalício</b> ao aplicativo da escola. Depois do curso, você continua com o app e recebe atualizações de conteúdo, apostilas por assunto e videoaulas atualizadas. O aprendizado continua mesmo depois da conclusão do curso. ⚡📚</p>
+      </div>
+      <img class="mascot" src="imagens/mascote-mulher.png" width="292" height="520" alt="Mascote eletricista com furadeira" loading="lazy">
+    </div>
+
+    <h2 class="sub">Não quer fazer curso? Use o <span class="y">Tech-User</span></h2>
+    <p class="lead">Adquira o direito de uso das ferramentas e conteúdos do app Ωmper em uma das 4 modalidades:</p>
+    <div class="plans">
+      <article class="plan">
+        <span class="badge">🔵 Tech-User Completo</span>
+        <div class="price">R$ 441,00</div>
+        <p>📚 Material didático completo + biblioteca dos cursos atuais e futuros + videoaulas + dicas rápidas + calculadora de dimensionamentos + simulador.</p>
+        <a class="btn buy" data-produto="Tech-User Completo" data-link="tech1" href="#">Quero o Completo</a>
+      </article>
+      <article class="plan">
+        <span class="badge">🟢 Tech-User 2</span>
+        <div class="price">R$ 308,00</div>
+        <p>🧮 Calculadora + simulador completos, com atualizações constantes.</p>
+        <a class="btn buy" data-produto="Tech-User 2" data-link="tech2" href="#">Quero o Tech-User 2</a>
+      </article>
+      <article class="plan">
+        <span class="badge">🟡 Tech-User 3</span>
+        <div class="price">R$ 220,50</div>
+        <p>🧮 Calculadora completa para dimensionamento de circuitos elétricos residenciais e comandos elétricos industriais, além de Energia Solar, carregadores de veículos elétricos (VE), ar-condicionado, SPDA, fator de potência, banco de capacitores e sistemas de proteção elétrica.</p>
+        <a class="btn buy" data-produto="Tech-User 3" data-link="tech3" href="#">Quero o Tech-User 3</a>
+      </article>
+      <article class="plan">
+        <span class="badge">🟠 Tech-User 4</span>
+        <div class="price">R$ 220,50</div>
+        <p>🖥️ Simulador completo de circuitos elétricos, da elétrica residencial aos comandos elétricos industriais, incluindo Combate a Incêndio e Energia Solar.</p>
+        <a class="btn buy" data-produto="Tech-User 4" data-link="tech4" href="#">Quero o Tech-User 4</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="light" id="duvidas">
+  <div class="wrap">
+    <h2>Tire suas <span class="y">dúvidas</span></h2>
+    <details><summary>Qual a diferença entre presencial e online?</summary><p>O presencial é na nossa escola, com laboratório prático e professores especialistas. O online (180 horas) você faz de onde estiver, com acesso ao app da Ωmper.</p></details>
+    <details><summary>Quanto custa e como posso pagar o presencial?</summary><p>O investimento é de R$ 1.470,00. No pix à vista tem 10% de desconto (R$ 1.323,00). No cartão, parcelamos em até 18x. No carnê, são 4x de R$ 367,50.</p></details>
+    <details><summary>O treinamento NR 10 está incluso?</summary><p>Sim, o treinamento NR 10 está incluso.</p></details>
+    <details><summary>O que é o app Super Amper?</summary><p>É o aplicativo da escola para simular e calcular. Alunos têm acesso vitalício, com atualizações de conteúdo, apostilas por assunto e videoaulas atualizadas.</p></details>
+    <details><summary>O que é o Tech-User?</summary><p>É para quem não quer fazer um curso, mas quer usar as ferramentas e conteúdos do app. Há 4 modalidades, de R$ 220,50 a R$ 441,00, descritas acima.</p></details>
+    <details><summary>Onde fica a escola?</summary><p>Avenida João Lyra Filho, 280, ao lado da Autoescola Zumbi, Robertão, União dos Palmares/AL. Será um prazer receber você! 😊</p></details>
+    <details><summary>Ainda tenho dúvidas. Como falo com vocês?</summary><p>Chame no WhatsApp (82) 99386-9774 ou no Instagram @amperescolaeletrica. Podemos explicar cada opção e ajudar você a escolher.</p></details>
+  </div>
+</section>
+
+<section id="local">
+  <div class="wrap info">
+    <div class="box">
+      <h3>📍 Onde estamos</h3>
+      <p>Avenida João Lyra Filho, 280<br>Ao lado da Autoescola Zumbi<br>Robertão — União dos Palmares/AL</p>
+    </div>
+    <div class="box">
+      <h3>▶️ Conheça nossos conteúdos</h3>
+      <p>Veja um pouco mais da Ωmper no nosso canal do YouTube.</p>
+      <a class="btn" href="https://www.youtube.com/playlist?list=PLE-P1rgz2qgI" target="_blank" rel="noopener">Ver no YouTube</a>
+    </div>
+  </div>
+</section>
+
 <section class="cta" id="matricula">
   <div class="wrap">
+    <img class="cta-m" src="imagens/mascotes-juntos.png" width="733" height="577" alt="Mascotes da Ωmper" loading="lazy">
     <h2>Faça sua <span class="y">matrícula</span> hoje mesmo na Ωmper!</h2>
-    <p>Garanta sua vaga pelo link abaixo. Se preferir, fale com a nossa equipe e venha conhecer a escola.</p>
-    <a class="btn buy" href="#">Comprar o curso</a>
+    <p>Escolha o seu curso e garanta sua vaga. Se preferir, fale com a nossa equipe.</p>
+    <a class="btn" href="#cursos">Escolher meu curso</a>
     <div class="contact">
       <a href="https://wa.me/5582993869774" target="_blank" rel="noopener">📞 (82) 99386-9774</a>
       <a href="https://instagram.com/amperescolaeletrica" target="_blank" rel="noopener">📷 @amperescolaeletrica</a>
@@ -103,11 +251,23 @@ footer{background:var(--deep);text-align:center;padding:24px 20px;font-size:.85r
 <footer>© Ωmper – Escola Profissionalizante de Elétrica</footer>
 
 <script>
-/* COLOQUE AQUI O LINK DE COMPRA DO CURSO (entre as aspas).
-   Enquanto estiver vazio, os botões levam ao WhatsApp da escola. */
-var LINK_COMPRA = "";
-var destino = LINK_COMPRA || "https://wa.me/5582993869774?text=" + encodeURIComponent("Olá! Quero me matricular na Ωmper.");
-document.querySelectorAll(".buy").forEach(function(a){a.href = destino; a.target = "_blank"; a.rel = "noopener";});
+//Colocar os links dos cursos
+var LINKS = {
+  presencial1: "",  // Eletricista Instalador e Manutenção Predial com Comandos
+  presencial2: "",  // Especialização em Comandos Elétricos
+  online:      "",  // Curso online 180h
+  tech1:       "",  // Tech-User Completo
+  tech2:       "",  // Tech-User 2
+  tech3:       "",  // Tech-User 3
+  tech4:       ""   // Tech-User 4
+};
+var WHATS = "https://wa.me/5582993869774?text=";
+document.querySelectorAll(".buy").forEach(function(a){
+  var p = a.getAttribute("data-produto");
+  a.href = LINKS[a.getAttribute("data-link")] ||
+    WHATS + encodeURIComponent("Olá! Quero me matricular: " + p + ".");
+  a.target = "_blank"; a.rel = "noopener";
+});
 </script>
 </body>
 </html>
